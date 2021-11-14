@@ -1,39 +1,60 @@
-html {
-    font-size: 13px;
-    /* px means "pixels": the base font size is now 10 pixels high  */
-    font-family: "Open Sans", sans-serif;
-    /* this should be the rest of the output you got from Google fonts */
-    background-color: #00539F;
+@font-face {
+    font-family: openSans;
+    src: url('../fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
 }
 
 body {
-    width: 600px;
-    margin: 0 auto;
-    background-color: #FF9500;
-    padding: 0 20px 20px 20px;
-    border: 5px solid black;
-    display: block;
+    font-family: openSans;
+}
+
+ul.a {
+    list-style-position: inside;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+}
+
+.wrap {
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 25px -4px #9da5ab;
+}
+
+article {
+    padding: 25px 0;
+    line-height: 150%;
+    text-align: left;
+}
+
+nav .item {
+    text-decoration: none;
+}
+
+nav .active {
+    border-bottom: 1px solid;
 }
 
 img {
-    display: block;
-    margin: 0 auto;
-    width: 600px;
-    height: 390px;
+    margin: auto;
+    padding: 10px;
+    max-width: 100%;
+    height: auto;
 }
 
-h1 {
-    font-size: 60px;
-    text-align: center;
-    margin: 0;
-    padding: 20px 0;
-    color: #00539F;
-    text-shadow: 3px 3px 1px black;
-}
-
-p,
-li {
-    font-size: 16px;
-    line-height: 2;
-    letter-spacing: 1px;
+@media only screen and (min-width: 768px) {
+    article {
+        padding: 40px;
+    }
+    .wrap {
+        max-width: 750px;
+        margin: 50px auto;
+        padding: 30px 40px;
+    }
+    img {
+        margin: auto;
+        padding: 10px;
+        max-width: 100%;
+        height: auto;
+    }
 }
